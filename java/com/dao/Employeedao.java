@@ -11,8 +11,8 @@ import jakarta.persistence.Persistence;
 
 public class Employeedao {
 
-	EntityManagerFactory emf = Persistence.createEntityManagerFactory("dev");
-	EntityManager manager = emf.createEntityManager();
+	EntityManagerFactory factory = Persistence.createEntityManagerFactory("dev");
+	EntityManager manager = factory.createEntityManager();
 	EntityTransaction transaction = manager.getTransaction();
 
 	public void save(Employee employee) {
@@ -44,4 +44,5 @@ public class Employeedao {
 		transaction.commit();
 	}
 }
+
 
