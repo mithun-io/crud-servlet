@@ -18,12 +18,10 @@
 				<th>dob</th>
 				<th>action</th>
 			</tr>
-			
 			<%
 			List<User> users = (List) request.getAttribute("users");
 			for (User user : users) {
 			%>
-			
 			<tr>
 				<td><%=user.getName()%></td>
 				<td><%=user.getEmail()%></td>
@@ -38,7 +36,6 @@
 					</a>
 				</td>
 			</tr>
-	
 			<%
 			}
 			%>
